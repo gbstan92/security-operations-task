@@ -1,5 +1,14 @@
 # CFP Security Operations Task
 
+Welcome to the challenge, please remember there is no wrong or right way to do this challenge just bear in mind the following;
+
+* Build it with security in mind
+* Spend no more than 4 hours on this challenge
+
+It is recommended that you use 
+* AZURE
+* Terraform
+
 The task is two-fold:
 
 * A practical case of developing a deployable production environment based on a simple application.
@@ -10,9 +19,9 @@ You will be expected to present and discuss both solutions.
 
 Some general points:
 
-* **Provide the solution as a public git repository that can easily be cloned by our team.**
+* **Provide the solution as a public git repository that our team can easily clone.**
 
-* Provide any instructions needed to run the automation solution in `README.md`.
+* Provide instructions to run the automation solution in `README.md`.
 
 * The configuration file `rates/config.py` has some defaults that will most likely change depending on the solution. It would be beneficial to have a way to more dynamically pass in config values.
 
@@ -24,7 +33,7 @@ Some general points:
 
 ### Premise
 
-Provided are two simplified parts of the same application environment: A database dump and an API service. Your task is to automate setting up the production environment in a reliable and testable manner using "infrastructure as code" principles.
+Two simplified parts of the same application environment are provided: A database dump and an API service. Your task is to automate setting up the production environment in a reliable and testable manner using "infrastructure as code" principles.
 
 The goal is to end up with a limited set of commands that would install and run them using containers. You can use any software that you find suitable for the task. The code should come with instructions on how to run and deploy it to AWS (or any other cloud you are comfortable with).
 
