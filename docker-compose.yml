@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Assuming your Dockerfile is in the same directory
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres-db
+    networks:
+      - my-network
+
+  postgres-db:
+    image: postgres:13.5
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: TestDatabase123!
+    volumes:
+      - ./db/rates.sql:/docker-entrypoint-initdb.d/rates.sql  # Mount SQL file to initialize the database
+    networks:
+      - my-network
+
+volumes:
+  postgres_data:
+
+networks:
+  my-network:
