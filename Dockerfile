@@ -20,4 +20,4 @@ EXPOSE 5000
 ENV FLASK_APP=rates.py
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-b", "0.0.0.0:3000", "wsgi"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "wsgi"]

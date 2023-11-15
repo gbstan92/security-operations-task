@@ -26,6 +26,13 @@ resource "azurerm_container_app" "this" {
       cpu    = 0.25
       memory = "0.5Gi"
     }
+
+    container {
+      name  = "postgres"
+      image = "cfsecops.azurecr.io/postgres:latest"
+      cpu    = 0.25
+      memory = "0.5Gi"
+    }
   }
   
   identity {
